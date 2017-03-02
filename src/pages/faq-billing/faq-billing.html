@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Billing FAQ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-card *ngFor="let d of data">
+<ion-card-content (click)="toggleDetails(d)" color="primary">
+      <strong>{{d.title}}</strong> 
+</ion-card-content>
+
+<ion-card-content *ngIf="d.showDetails" >
+
+      <p>  {{d.details}} </p>
+</ion-card-content>
+
+  </ion-card>
+</ion-content>

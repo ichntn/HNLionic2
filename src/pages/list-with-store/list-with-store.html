@@ -1,0 +1,33 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+
+    <button ion-button menuToggle color="light">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon ios="md-funnel" md="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+
+        <ion-title>Patient Service Center</ion-title>
+    </ion-navbar>
+
+</ion-header>
+<ion-content>
+    <ion-list [virtualScroll]="stores">
+        <ion-item *virtualItem="let store" (click)="toPSCDetail(store)">
+            <ion-thumbnail item-left>
+                <ion-img [src]="store.ImagePath"></ion-img>
+            </ion-thumbnail>
+            <h2>{{store.PSCName}}</h2>
+            <h3>{{store.AddressLine}}</h3>
+            <p>{{'Wait Time : '+store.WaitTimeDescription}}</p>
+        </ion-item>
+    </ion-list>
+    <ion-fab right bottom>
+        <button ion-fab (click)="tomapwithStores()"><ion-icon name="map"></ion-icon></button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,38 @@
+<!--
+  Generated template for the ViewTest page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Select Test</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of avilabletest"  (click)="itemSelected($event, item)" >
+            <ion-thumbnail item-left>
+      <img src="{{item.imgsrc}}">
+   </ion-thumbnail> 
+   <h2>{{ item.title }} </h2>
+   
+     <ion-icon *ngIf="item.selected" name="checkmark" item-right color="primary"></ion-icon>
+   <p>{{item.Description}}</p>
+  
+     <p><i>Preparation:</i></p>
+           <p>{{item.Preparation}}</p>
+         <button ion-button icon-right right (click)="showtest($event, item)">
+View  <ion-icon name="eye"></ion-icon>
+</button> 
+            </ion-item>     
+    
+    </ion-list>  
+<ion-fab right bottom>
+         <button ion-fab color="{{isDisabled ? 'danger' : 'primary'}}" [disabled]="isDisabled" (click)="movenext()" ><ion-icon name="arrow-dropright"></ion-icon></button>   
+     </ion-fab>
+</ion-content>

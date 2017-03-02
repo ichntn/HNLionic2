@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle color="light">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon ios="md-funnel" md="md-funnel"></ion-icon>
+      </button>
+        </ion-buttons>
+
+
+        <ion-title color="light">Patient Service Center</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content no-bounce class="no-scroll">
+    <div class="flip-container flip" #flipContainer>
+        <div class="flipper">
+            <div class="back">
+                <div #pleaseConnect id="please-connect">
+                    <p>Please connect to the Internet...</p>
+                </div>
+                <div #map id="map"></div>
+            </div>
+            <ion-scroll class="front" scrollX="true">
+                <ion-list [virtualScroll]="locations">
+                    <ion-item text-wrap *virtualItem="let store" (click)="toPSCDetail(store)">
+                        <ion-thumbnail item-left>
+                            <ion-img [src]="store.ImagePath"></ion-img>
+                        </ion-thumbnail>
+                        <h2>{{store.PSCName}}</h2>
+                        <h3>{{store.AddressLine}}</h3>
+                        <p class="wait-time">{{store.WaitTimeDescription + ' mins'}}</p>
+                        <ion-thumbnail class="ion-right-thumbnail" item-right>
+                            <div class="item-right-waittime">
+                                <h2>{{store.durationValue | secondsTominute}}
+                                    <p>mins</p>
+                                </h2>
+                            </div>
+                            <!-- <div class="item-right-waittime">
+                                <h2>{{store.distanceValue}}
+                                    <p>Miles.</p>
+                                </h2>
+                            </div>-->
+                        </ion-thumbnail>
+
+                        <!--<ion-thumbnail item-right class="rightThumbnailCustom">
+                            <p>{{store.WaitTimeDescription}} min</p> 
+                        </ion-thumbnail>-->
+                    </ion-item>
+                </ion-list>
+            </ion-scroll>
+        </div>
+    </div>
+
+    <ion-fab right bottom>
+        <button ion-fab (click)="toggleView()"><ion-icon name="{{isBackVisible ? 'map' : 'list'}}"></ion-icon></button>
+    </ion-fab>
+</ion-content>

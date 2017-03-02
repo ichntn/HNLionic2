@@ -1,0 +1,29 @@
+<ion-header>
+  <!--<ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>-->
+</ion-header>
+
+<ion-content padding="true" scroll="false">
+    <ion-row>
+        <ion-col text-center>
+            <img margin-vertical src="assets/img/logowithname.png" />
+            <h3>My HNL Access Login</h3>
+        </ion-col>
+    </ion-row>
+    <ion-list no-lines margin-vertical>
+        <ion-item>
+            <button ion-button full large (click)="loginUser()">
+                Log In
+            </button>
+        </ion-item>
+        <ion-item text-center>
+            <button ion-button outline large round>
+                Register Now !
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

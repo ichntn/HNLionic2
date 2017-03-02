@@ -1,0 +1,66 @@
+{
+  "project_info": {
+    "project_number": "237849399961",
+    "firebase_url": "https://psclocator-155906.firebaseio.com",
+    "project_id": "psclocator-155906",
+    "storage_bucket": "psclocator-155906.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237849399961:android:a0bbde87a5724347",
+        "android_client_info": {
+          "package_name": "infogain.com.psclocator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237849399961-cmv0gf1k6g3ld28nfo1sego3i7ev6k2f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "infogain.com.psclocator",
+            "certificate_hash": "0c7a015d42502c1b9b08e2097624e79e63bab1df"
+          }
+        },
+        {
+          "client_id": "237849399961-cieii65pfeee6pm1um0j0sk5egl0ul0p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "infogain.com.psclocator",
+            "certificate_hash": "463edf7c004b2edea517275ce4c38e04a2cad613"
+          }
+        },
+        {
+          "client_id": "237849399961-5siouh7ksl9mefp9oom3fjirb80m0ul6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2nxuuA0OjOFWCC_cA6TJhpZzLTAVjnwA"
+        },
+        {
+          "current_key": "AIzaSyDLeYdwcjrYQLLJyIvZ8XRxK_O-fO-vY64"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237849399961-5siouh7ksl9mefp9oom3fjirb80m0ul6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

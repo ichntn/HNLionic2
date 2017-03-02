@@ -1,0 +1,21 @@
+page-psc-detail {
+    .header-image {
+        height: 30vh;
+    }
+    .main-content {
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+    }
+    .toolbar {
+        .toolbar-background {
+            //background: transparent;
+        }
+    }
+    .scroll-content {
+        //margin-top: 0px!important;
+    }
+    .navigate-icon {
+        transform: rotate(45deg);
+    }
+}

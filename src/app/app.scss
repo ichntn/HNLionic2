@@ -1,0 +1,102 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+$toolbar-text-color: #033e74;
+$dark-grey: #313134 !default;
+$very-light-grey: #B0B7BC !default;
+.toolbar-background {
+    background-color: #033e74;
+}
+
+
+.root-home {
+    height: 100%;
+    .home {
+        ion-content {
+            background-color: black!important;
+        }
+    }
+}
+
+.harryCustom
+{
+    background-color: #033e74;
+}
+
+#footerToolbar
+{
+    background-color: #ffffff;
+}
+
+
+.logoutFooterBtn
+{
+    margin-right: 5px;
+}
+
+#rootSlideMenu {
+    .profile-block {
+        .custom-avatar {
+            img {
+                border-radius: 50%;
+                border: 1px solid #fff;
+                height: 60px;
+                background-color: #fff;
+                left: 0px;
+                right: 0px;
+            }
+        }
+    }
+    // .scroll-content {
+    //     background-color: #033e74;
+    // }
+    .item:first-child {
+        border-top: 0px;
+    }
+    .item:last-child {
+        border-bottom: 0px;
+    }
+    [item-left] {
+        height: 32px;
+        width: 32px;
+    }
+    .toolbar-background {
+        border-color: $dark-grey;
+    }
+    .item {
+        // background-color: #033e74;
+        //border-bottom: 1px solid #8192b9;
+        .item-inner {
+            border-bottom: 0px;
+        }
+        a.item-content {
+            padding: 10px 49px 10px 16px;
+        }
+        * {
+            vertical-align: middle;
+        }
+        p {
+            font-size: 1.5rem;
+            color: $very-light-grey;
+        }
+    }
+    img {
+        margin-right: 5px;
+    }
+    ion-footer {
+        button {
+            color: $very-light-grey;
+        }
+    }
+}

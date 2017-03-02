@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><small>Frequently Asked Questions</small></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row *ngFor="let row of grid">
+    <ion-col width-50 *ngFor="let obj of row">  
+      <div [class]="obj.CssClass" (click)="showPage($event, obj.Key)">
+    <div class="contentx">
+        <div class="table">
+            <div class="table-cell numbers">
+<h6>{{obj.Title}}</h6>
+
+            </div>
+        </div>
+    </div>
+</div>  
+      
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
+

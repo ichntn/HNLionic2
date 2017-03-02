@@ -1,0 +1,172 @@
+<!--
+  Generated template for the ScheduleHomeCall page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Schedule House Call</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="card-background-page" padding>
+
+    <ion-fab top right>
+        <a href="tel:+1-877-402-4221">
+            <button ion-fab>
+            <ion-icon name="call"></ion-icon>
+        </button>
+        </a>
+    </ion-fab>
+    <ion-card [hidden]="!nohousecall">
+        <img src="assets/img/hnlhousecallIMAGES2.jpg">
+        <ion-card-content>
+            <p>Now you can have blood work done in the comfort of your own home. Click on '+' button to schedule an appointment now</p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="project project-radius project-primary" [hidden]="!nohousecall">
+        <div class="project-content">
+            <span item-left>
+                     <ion-item>
+                    <h1>
+                         <ion-icon name="calendar"></ion-icon>
+
+                    <!--<ion-icon name="calendar"></ion-icon>-->
+               No House Call  
+                </h1>        
+                        </ion-item>
+                    
+                </span>
+        </div>
+
+    </ion-card>
+    <ion-list [hidden]="nohousecall">
+        <h1>My House Call</h1>
+        <ion-item-sliding *ngFor="let item of housecallsList">
+            <ion-item (click)="trackCall(item)">
+                <ion-card class="project project-radius project-primary">
+                    <div [class]="item.callinitiated ? 'active_shape' : 'shape' ">
+                    </div>
+                    <div class="project-content">
+                        <span item-left>
+                    <h1>
+                    <ion-icon name="calendar"></ion-icon>
+                {{item.AppointmentDate | date:'dd MMM yyyy'}} 
+                <small> {{item.Time | ampmformatter}}</small>
+                </h1>
+                </span>
+                        <div class="col"></div>
+
+                        <ion-item>
+                            <h3 class="lead" *ngFor="let test of item.Test">
+                                {{test.title}}
+                            </h3>
+                        </ion-item>
+                    </div>
+                </ion-card>
+            </ion-item>
+            <ion-item-options side="right">
+
+                <button ion-button color="danger" (click)="deletehousecall(item.$key)">
+                  <ion-icon name="trash"> </ion-icon>
+              </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-fab bottom right>
+        <button ion-fab (click)="placehousecall()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-footer>
+<!--
+  Generated template for the ScheduleHomeCall page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Schedule House Call</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="card-background-page" padding>
+
+    <ion-fab top right>
+        <a href="tel:+1-877-402-4221">
+            <button ion-fab>
+            <ion-icon name="call"></ion-icon>
+        </button>
+        </a>
+    </ion-fab>
+    <ion-card [hidden]="!nohousecall">
+        <img src="assets/img/hnlhousecallIMAGES2.jpg">
+        <ion-card-content>
+            <p>Now you can have blood work done in the comfort of your own home. Click on '+' button to schedule an appointment now</p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="project project-radius project-primary" [hidden]="!nohousecall">
+        <div class="project-content">
+            <span item-left>
+                     <ion-item>
+                    <h1>
+                         <ion-icon name="calendar"></ion-icon>
+
+                    <!--<ion-icon name="calendar"></ion-icon>-->
+               No House Call  
+                </h1>        
+                        </ion-item>
+                    
+                </span>
+        </div>
+
+    </ion-card>
+    <ion-list [hidden]="nohousecall">
+        <h1>My House Call</h1>
+        <ion-item-sliding *ngFor="let item of housecallsList">
+            <ion-item (click)="trackCall(item)">
+                <ion-card class="project project-radius project-primary">
+                    <div class="active_shape">
+                    </div>
+                    <div class="project-content">
+                        <span item-left>
+                    <h1>
+                    <ion-icon name="calendar"></ion-icon>
+                {{item.AppointmentDate | date:'dd MMM yyyy'}} 
+                <small> {{item.Time | ampmformatter}}</small>
+                </h1>
+                </span>
+                        <div class="col"></div>
+
+                        <ion-item>
+                            <h3 class="lead" *ngFor="let test of item.Test">
+                                {{test.title}}
+                            </h3>
+                        </ion-item>
+                    </div>
+                </ion-card>
+            </ion-item>
+            <ion-item-options side="right">
+
+                <button ion-button color="danger" (click)="deletehousecall(item.$key)">
+                  <ion-icon name="trash"> </ion-icon>
+              </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-fab bottom right>
+        <button ion-fab (click)="placehousecall()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-footer>
